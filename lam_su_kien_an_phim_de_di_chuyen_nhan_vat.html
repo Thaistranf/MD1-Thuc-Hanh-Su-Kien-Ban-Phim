@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body onload="come()">
+    <img id="meoDen" style="position: absolute; left: 0; top: 0; width: 300px; height: 300px" src="https://dthezntil550i.cloudfront.net/86/latest/861911302007288750002221253/05f85cab-dc3a-48e3-81ff-b7347d2e450b.png" alt="MÈO ĐEN">
+    <script>
+        function meoDenUp() {
+            let imgMeoDen = document.getElementById("meoDen");
+            imgMeoDen.style.top = parseInt(imgMeoDen.style.top) + 30 + "px";
+        }
+        function meoDenDown() {
+            let imgMeoDen = document.getElementById("meoDen");
+          imgMeoDen.style.top = parseInt(imgMeoDen.style.top) - 30 + "px";
+        }
+        function meoDenLeft() {
+            let imgMeoDen = document.getElementById("meoDen");
+          imgMeoDen.style.left = parseInt(imgMeoDen.style.left) - 30 + "px";
+        }
+        function meoDenRight() {
+            let imgMeoDen = document.getElementById("meoDen");
+          imgMeoDen.style.left = parseInt(imgMeoDen.style.left) + 30 + "px";
+        }
+        function keyBoard(x) {
+          switch (x.keyCode) {
+            case 37:
+              meoDenLeft();
+              break;
+            case 39:
+              meoDenRight();
+              break;
+            case 38:
+                meoDenDown();
+              break;
+            case 40:
+                meoDenUp();
+              break;
+          }
+        }
+        function come() {
+          window.addEventListener('keydown',keyBoard);
+        }
+    </script>
+</body>
+</html>
